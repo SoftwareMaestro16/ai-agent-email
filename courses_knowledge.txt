@@ -1,0 +1,180 @@
+DevCourses - Software Engineering Education
+
+Company Overview
+DevCourses is an educational technology company specializing in professional software engineering courses. Our mission is to provide high-quality, practical programming education to help students launch successful careers in tech. We offer comprehensive courses across backend, frontend, mobile development, and game development.
+
+Course Directions and Categories
+DevCourses offers courses in four main directions:
+
+1. Backend Development - Server-side programming and APIs
+   - Python Backend Development
+   - Java Backend Development
+   - Node.js Backend Development
+
+2. Frontend Development - User interfaces and web applications
+   - TypeScript Frontend Development
+   - React Development
+   - Next.js Full-Stack Development
+
+3. Mobile Development - iOS and Android applications
+   - Kotlin Android Development
+   - Swift iOS Development
+
+4. Game Development - Video game programming
+   - C++ Game Development (Unreal Engine)
+   - C# Unity Game Development
+
+All courses are available for students aged 15 years and older. We provide courses in backend, frontend, mobile, and game development directions.
+
+Age Requirements
+All DevCourses programs are open to students aged 15 years and older. Students under 18 must have parental consent to enroll. We believe that motivated teenagers can successfully learn professional programming skills with proper guidance and support.
+
+Backend Development Courses
+
+Python Backend Development
+Duration: 6 months
+Price: $899
+Next enrollment: March 15, 2026
+Requirements: Basic computer skills, no prior programming experience needed
+What you'll learn: Python fundamentals, Django framework, REST APIs, databases (PostgreSQL), authentication, deployment, testing
+Career outcomes: Junior Python Developer, Backend Engineer
+Class size: Maximum 25 students per cohort
+
+Java Backend Development
+Duration: 7 months
+Price: $999
+Next enrollment: April 1, 2026
+Requirements: Basic understanding of programming concepts recommended
+What you'll learn: Java fundamentals, Spring Boot, microservices, SQL databases, Maven/Gradle, unit testing, cloud deployment
+Career outcomes: Java Developer, Enterprise Backend Engineer
+Class size: Maximum 20 students per cohort
+
+Node.js Backend Development
+Duration: 5 months
+Price: $849
+Next enrollment: March 20, 2026
+Requirements: Basic JavaScript knowledge helpful but not required
+What you'll learn: JavaScript/Node.js, Express.js, MongoDB, REST APIs, authentication, real-time applications with Socket.io, deployment
+Career outcomes: Node.js Developer, Full-stack JavaScript Developer
+Class size: Maximum 30 students per cohort
+
+Frontend Development Courses
+
+TypeScript Frontend Development
+Duration: 5 months
+Price: $799
+Next enrollment: March 10, 2026
+Requirements: Basic HTML/CSS knowledge, age 15+
+What you'll learn: TypeScript fundamentals, type systems, modern JavaScript, DOM manipulation, async programming, tooling (Webpack, Vite)
+Career outcomes: Frontend Developer, TypeScript Specialist
+Class size: Maximum 30 students per cohort
+
+React Development
+Duration: 6 months
+Price: $899
+Next enrollment: April 5, 2026
+Requirements: JavaScript basics, HTML/CSS knowledge
+What you'll learn: React fundamentals, hooks, state management (Redux, Zustand), component patterns, testing (Jest, React Testing Library), performance optimization
+Career outcomes: React Developer, Frontend Engineer
+Class size: Maximum 25 students per cohort
+
+Next.js Full-Stack Development
+Duration: 7 months
+Price: $1,099
+Next enrollment: March 25, 2026
+Requirements: React knowledge or completion of React course
+What you'll learn: Next.js 14+, server components, API routes, authentication, database integration, SEO optimization, deployment (Vercel), full-stack patterns
+Career outcomes: Full-Stack Developer, Next.js Specialist
+Class size: Maximum 20 students per cohort
+
+Mobile Development Courses
+
+Kotlin Android Development
+Duration: 6 months
+Price: $949
+Next enrollment: April 10, 2026
+Requirements: Basic programming knowledge, age 15+
+What you'll learn: Kotlin language, Android SDK, Jetpack Compose, Material Design, REST API integration, local databases (Room), Google Play deployment
+Career outcomes: Android Developer, Mobile Engineer
+Class size: Maximum 20 students per cohort
+
+Swift iOS Development
+Duration: 6 months
+Price: $949
+Next enrollment: April 15, 2026
+Requirements: Basic programming concepts, Mac computer required
+What you'll learn: Swift language, SwiftUI, UIKit basics, iOS SDK, Core Data, networking, App Store submission, iOS design patterns
+Career outcomes: iOS Developer, Mobile Engineer
+Class size: Maximum 20 students per cohort
+
+Game Development Courses
+
+C++ Game Development
+Duration: 8 months
+Price: $1,199
+Next enrollment: March 30, 2026
+Requirements: Strong interest in games, basic programming helpful
+What you'll learn: C++ fundamentals, Unreal Engine 5, game physics, 3D graphics, gameplay programming, optimization, multiplayer basics
+Career outcomes: Game Programmer, Engine Developer
+Class size: Maximum 15 students per cohort
+
+C# Unity Game Development
+Duration: 7 months
+Price: $1,099
+Next enrollment: April 20, 2026
+Requirements: Age 15+, passion for game development
+What you'll learn: C# programming, Unity Engine, 2D/3D game development, physics, animations, UI systems, mobile game deployment, monetization
+Career outcomes: Unity Developer, Indie Game Developer
+Class size: Maximum 18 students per cohort
+
+Payment and Enrollment
+
+Payment Options
+- Full payment: 5% discount on total price
+- Monthly installments: Available for all courses (6-8 monthly payments depending on course duration)
+- Early bird discount: 10% off if enrolled 30+ days before start date
+- Student discount: 15% off with valid student ID from accredited institution
+
+Enrollment Process
+1. Submit online application form on DevCourses website
+2. Complete placement assessment (basic aptitude test)
+3. Schedule interview with course coordinator
+4. Receive acceptance decision within 5 business days
+5. Pay deposit (20% of course fee) to secure spot
+6. Complete pre-course materials before start date
+
+Refund Policy
+- Full refund if cancelled 14+ days before course start
+- 50% refund if cancelled 7-13 days before start
+- No refund after course begins
+- Course can be deferred to next cohort with $100 fee
+
+Learning Format
+All courses include:
+- Live online classes (2-3 times per week, evenings)
+- Recorded lectures for review
+- Hands-on projects and assignments
+- Code reviews from instructors
+- Career support and resume building
+- Access to student community Discord
+- Certificate of completion
+
+Instructor Qualifications
+All DevCourses instructors have:
+- Minimum 5 years professional development experience
+- Experience at major tech companies (Google, Meta, Amazon, Microsoft, etc.)
+- Proven teaching track record
+- Active involvement in open-source communities
+
+Success Metrics
+- 87% course completion rate
+- 78% of graduates employed in tech within 6 months
+- Average starting salary: $65,000 for junior positions
+- 4.8/5 average student satisfaction rating
+- Over 5,000 graduates since 2020
+
+Contact Information
+Website: www.devcourses.com
+Email: admissions@devcourses.com
+Phone: +1 (555) 123-4567
+Support hours: Monday-Friday, 9 AM - 6 PM EST
