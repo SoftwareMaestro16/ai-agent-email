@@ -2,7 +2,7 @@
 
 Intelligent email assistant powered by RAG (Retrieval Augmented Generation) for automatically answering course inquiries.
 
-![Email Response Example](assets/email-response-example.png)
+![Email Response Example](assets/agent-answer.jpg)
 
 ## 🎯 Features
 
