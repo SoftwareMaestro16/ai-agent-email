@@ -2,6 +2,8 @@
 
 Intelligent email assistant powered by RAG (Retrieval Augmented Generation) for automatically answering course inquiries.
 
+![Email Response Example](assets/email-response-example.png)
+
 ## 🎯 Features
 
 - **RAG System**: Vector search through course knowledge base (FAISS + OpenAI embeddings)
@@ -87,7 +89,6 @@ python email_monitor.py
 
 The agent will:
 - Check inbox every 30 seconds
-- Read unread emails
 - Process questions with RAG
 - Send automatic replies
 - Notify admin for uncertain questions
@@ -151,6 +152,27 @@ Confidence Analysis
 
 ## 💡 Example Usage
 
+### Email Response Example
+
+The agent automatically responds to course inquiries:
+
+![Agent Response](assets/email-response-example.png)
+
+**User Question:**
+> "What courses do you offer in backend development?"
+
+**Agent Response:**
+> Thank you for contacting DevCourses!
+> 
+> We offer three backend development courses:
+> 1. Python Backend Development ($899, 6 months) - Next enrollment: March 15, 2026
+> 2. Java Backend Development ($999, 7 months) - Next enrollment: April 1, 2026
+> 3. Node.js Backend Development ($849, 5 months) - Next enrollment: March 20, 2026
+> 
+> All courses include live online classes, hands-on projects, and career support.
+> 
+> If you have more questions, feel free to reply or visit www.devcourses.com.
+
 ### Simulation Mode
 
 ```bash
@@ -212,29 +234,24 @@ The Python Backend Development course costs $899...
 - **C++ (Unreal)** - $1,199 (8 months) - Next: March 30, 2026
 - **C# (Unity)** - $1,099 (7 months) - Next: April 20, 2026
 
-## 🔌 Production Integration
+## 🔌 Production Deployment
 
-For production email integration, replace simulation logic with:
+For production use:
 
-### Option 1: SendGrid API
-```python
-import sendgrid
-sg = sendgrid.SendGridAPIClient(api_key=os.environ.get('SENDGRID_API_KEY'))
-# Free tier: 100 emails/day
+1. **Use a dedicated email account** for the agent
+2. **Set up email forwarding** from your main support email
+3. **Monitor logs** for errors and performance
+4. **Adjust check interval** based on email volume
+5. **Set up alerts** for admin notifications
+
+### Recommended Setup
+
 ```
-
-### Option 2: Mailgun API
-```python
-import requests
-requests.post("https://api.mailgun.net/v3/YOUR_DOMAIN/messages", ...)
-# Free tier: 5,000 emails/month
-```
-
-### Option 3: AWS SES
-```python
-import boto3
-client = boto3.client('ses')
-# Pay as you go pricing
+support@devcourses.com (main)
+    ↓ (forward)
+agent@devcourses.com (monitored by AI)
+    ↓ (auto-reply)
+User receives response
 ```
 
 ## 🛠️ Customization

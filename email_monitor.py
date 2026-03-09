@@ -5,7 +5,7 @@ import smtplib
 import email
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from datetime import datetime
+from datetime import datetime, timezone
 from dotenv import load_dotenv
 from agent_system import AgentSystem  # Use agent instead of RAG
 
@@ -28,10 +28,17 @@ class EmailMonitor:
         
         self.agent = AgentSystem()  # Use agent with tools
         self.processed_emails = set()
+        self.start_time = datetime.now(timezone.utc)  # Use UTC timezone
         
         print(f"📧 Email: {self.email_address}")
         print(f"🔧 IMAP: {self.imap_server}")
         print(f"🔧 SMTP: {self.smtp_server}:{self.smtp_port}")
+        print(f"⏰ Started at: {self.start_time.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+        
+        # Mark all existing unread emails as processed (ignore old emails)
+        print(f"\n🧹 Marking all existing unread emails as processed...")
+        self.mark_existing_emails_as_processed()
+        print(f"✅ Ready to process NEW emails only!\n")
     
     def connect_imap(self):
         """Connect to IMAP server"""
@@ -42,6 +49,30 @@ class EmailMonitor:
         except Exception as e:
             print(f"❌ IMAP connection failed: {e}")
             return None
+    
+    def mark_existing_emails_as_processed(self):
+        """Mark all existing unread emails as processed to ignore them"""
+        mail = self.connect_imap()
+        if not mail:
+            return
+        
+        try:
+            mail.select('INBOX')
+            status, messages = mail.search(None, 'UNSEEN')
+            email_ids = messages[0].split()
+            
+            print(f"   Found {len(email_ids)} existing unread emails")
+            
+            for email_id in email_ids:
+                self.processed_emails.add(email_id)
+            
+            print(f"   Marked {len(email_ids)} emails as processed (will ignore)")
+            
+            mail.close()
+            mail.logout()
+            
+        except Exception as e:
+            print(f"   ⚠️ Error: {e}")
     
     def send_email(self, to_email, subject, body):
         """Send email via SMTP"""
@@ -121,16 +152,19 @@ Phone: +1 (555) 123-4567"""
         
         try:
             mail.select('INBOX')
+            
+            # Search for ALL unread emails
             status, messages = mail.search(None, 'UNSEEN')
             email_ids = messages[0].split()
             
-            if email_ids:
-                print(f"\n📬 Found {len(email_ids)} unread emails")
+            # Filter out already processed emails
+            new_email_ids = [eid for eid in email_ids if eid not in self.processed_emails]
             
-            for email_id in email_ids:
-                if email_id in self.processed_emails:
-                    continue
-                
+            if new_email_ids:
+                print(f"\n📬 Found {len(new_email_ids)} NEW unread emails!")
+            
+            for email_id in new_email_ids:
+                # Fetch email
                 status, msg_data = mail.fetch(email_id, '(RFC822)')
                 
                 for response_part in msg_data:
@@ -150,22 +184,29 @@ Phone: +1 (555) 123-4567"""
                         else:
                             body = msg.get_payload(decode=True).decode()
                         
-                        print(f"\n📨 From: {from_email}")
-                        print(f"Subject: {subject}")
-                        print(f"Question: {body[:100]}...")
+                        print(f"\n📨 Processing email from: {from_email}")
+                        print(f"   Subject: {subject}")
+                        print(f"   Question: {body[:100]}...")
                         
                         # Process and respond
+                        print(f"   🤖 Generating response...")
                         response = self.process_question(body, from_email)
+                        
+                        print(f"   📤 Sending reply...")
                         reply_subject = f"Re: {subject}" if not subject.startswith("Re:") else subject
                         self.send_email(from_email, reply_subject, response)
                         
+                        # Mark as processed
                         self.processed_emails.add(email_id)
+                        print(f"   ✅ Done!")
             
             mail.close()
             mail.logout()
             
         except Exception as e:
+            import traceback
             print(f"❌ Error checking emails: {e}")
+            print(traceback.format_exc())
     
     def run(self, interval=60):
         """Run email monitoring loop"""
