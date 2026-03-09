@@ -284,8 +284,6 @@ Action Required: Manual review and response needed
 ============================================================
 ```
 
-Admin email: **softwaremaestro16@gmail.com**
-
 ## 🐛 Troubleshooting
 
 **Issue**: `ModuleNotFoundError`
@@ -314,9 +312,3 @@ MIT License - Feel free to use for your projects
 4. Push to branch
 5. Open pull request
 
-## 📧 Contact
-
-For questions about DevCourses:
-- Email: admissions@devcourses.com
-- Phone: +1 (555) 123-4567
-- Website: www.devcourses.com
