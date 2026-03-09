@@ -157,19 +157,7 @@ The agent automatically responds to course inquiries:
 ![Agent Response](assets/agent-answer.jpg)
 
 **User Question:**
-> "What courses do you offer in backend development?"
-
-**Agent Response:**
-> Thank you for contacting DevCourses!
-> 
-> We offer three backend development courses:
-> 1. Python Backend Development ($899, 6 months) - Next enrollment: March 15, 2026
-> 2. Java Backend Development ($999, 7 months) - Next enrollment: April 1, 2026
-> 3. Node.js Backend Development ($849, 5 months) - Next enrollment: March 20, 2026
-> 
-> All courses include live online classes, hands-on projects, and career support.
-> 
-> If you have more questions, feel free to reply or visit www.devcourses.com.
+> "Could you provide a list of all frontend courses including their start dates and prices?"
 
 ### Simulation Mode
 
