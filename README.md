@@ -2,8 +2,6 @@
 
 Intelligent email assistant powered by RAG (Retrieval Augmented Generation) for automatically answering course inquiries.
 
-![Email Response Example](assets/agent-answer.jpg)
-
 ## 🎯 Features
 
 - **RAG System**: Vector search through course knowledge base (FAISS + OpenAI embeddings)
@@ -156,7 +154,7 @@ Confidence Analysis
 
 The agent automatically responds to course inquiries:
 
-![Agent Response](assets/email-response-example.png)
+![Agent Response](assets/agent-answer.jpg)
 
 **User Question:**
 > "What courses do you offer in backend development?"
